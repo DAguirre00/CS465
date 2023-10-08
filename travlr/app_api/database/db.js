@@ -4,7 +4,7 @@ const dbURI = `mongodb://${host}/travlr`;
 const readLine = require('readline');
 
 //avoid 'current Server Discovery nd Monitoring engine is deprecated
-mongoose.set('useUnifitedTopology', true);
+//mongoose.set('useUnifitedTopology', true);
 
 const connect = () => {
   setTimeout(() => mongoose.connect(dbURI, {
@@ -61,4 +61,4 @@ process.on('SIGTERM', () => {
 
 connect();
 
-require('./travlr');
+require("./models/travlr");
